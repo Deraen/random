@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  align-content: stretch;
+  background: #888;
+}
+#app {
+  display: flex;
+  flex: 1;
+}
+.container {
+  flex: 1;
+  display: flex;
+  align-content: stretch;
+  flex-direction: row;
+}
+.container > div {
+  flex: 1;
+  display: flex;
+}
+.panel {
+  flex: 3;
+  background: #fff;
+  margin: 15px;
+  transition: flex-grow .5s linear, flex-shrink .5s linear, flex-basis .5s linear;
+}
+.panel.out {
+  flex: 0.01 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+.panel.out h1 {
+  flex: 1;
+  width: 1px;
+  word-wrap: break-word;
+}
+.panel.out .content {
+  display: none;
+}
+.panel.hide {
+  flex: 0 0 0px;
+}
+.sidebar {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+.foo-enter {
+  transition: flex-grow .5s linear, flex-shrink .5s linear, opacity .5s ease-out;
+  flex-grow: 5;
+  opacity: 0.01;
+}
+.foo-enter.foo-enter-active {
+  flex-grow: 3;
+  opacity: 1;
+}
+.foo-leave {
+  transition: flex-grow .5s linear, flex-shrink .5s linear, opacity .5s ease-out;
+  flex-grow: 3;
+  opacity: 1;
+}
+.foo-leave.foo-leave-active {
+  flex-grow: 0.001;
+  opacity: 0.01;
+}
+/*# sourceMappingURL=style.main.css.map */
